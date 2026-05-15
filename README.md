@@ -1,6 +1,6 @@
 # Travelworld3
 
-# TravelWorld2
+
 
 # DevOps Project: Travel Website Deployment
 
@@ -8,26 +8,30 @@
 This project demonstrates end-to-end deployment of a travel website using modern DevOps tools including Git, Ansible, Docker, Jenkins, Kubernetes, and AWS (EC2 & EKS). The Cluster objects like Nodes, Pods and Cluster usage of CPU is also demonstrated using Grafana and Prometheus.
 
 ## 2. GitHub Repository Structure
-kubernetes/
-├── Ansible/
-│ ├── installation.yaml
-│ └── inventory.yaml
-├── frontend/
-│ ├── Dockerfile
-│ ├── index.html
-│ ├── script.js
-│ └── style.css
-├── backend/
-│ ├── api.php
-│ └── Dockerfile
-├── k8s/
-│ ├── backend-deployment.yaml
-│ ├── backend-service.yaml
-│ ├── frontend-deployment.yaml
-│ └── frontend-service.yaml
-└── Jenkinsfile
+.
+├── CODEOWNER
+├── Jenkinsfile
+├── README.md
+├── backend
+│   ├── Dockerfile
+│   └── api.php
+├── frontend
+│   ├── Dockerfile
+│   ├── index.html
+│   ├── nginx.conf
+│   ├── script.js
+│   └── style.css
+└── k8s
+    ├── back-deployment.yaml
+    ├── back-service.yaml
+    ├── db.sql
+    ├── front-deployment.yaml
+    ├── front-service.yaml
+    ├── mysql-configmap.yaml
+    ├── mysql-deployment.yaml
+    └── mysql-service.yaml
 
-This is a multi-branch project in which there are 3 branches: main, frontdev (codes pushed by frontend developer) and backdev (code pushed by backened developer). Collaboratores are added to approve the codes update and there approving authority is assigned so that PR for frontend and backend codes will be forwarded to the respective collaborator
+This is a multi-branch project in which there are 3 branches: main, frontend (codes pushed by frontend developer) and backend (code pushed by backened developer). Collaboratores are added to approve the codes update and there approving authority is assigned so that PR for frontend and backend codes will be forwarded to the respective collaborator
 
 
 ---
