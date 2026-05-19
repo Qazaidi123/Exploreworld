@@ -78,17 +78,24 @@ Developer pushes code to GitHub ---> PR generation (manually) ---> PR forwarded 
 
 ## 6. Screenshots
 
-- Jenkins Pipeline
-- ![Jenkins pipeline](screenshots/jenkinspipeline_20260408-232141_Chrome.jpg)
-- Kubernetes Pods and Services
-- ![kubernetes Pods & SVC](screenshots/pods_svc_20260408-233015_Termius.jpg)
-- AWS EKS Cluster
-- ![EKS Cluster](screenshots/eks_cluster_20260408-233311_Chrome.jpg)
 - Website Output
-- ![Website Page](screenshots/websitepage1_20260408-231544_Chrome.jpg)
-- ![Website Page 2](screenshots/websitepage2_20260408-231606_Chrome.jpg)
-- DockerHub Images
-- ![DockerHub](screenshots/dockerhub_20260408-233236_Chrome.jpg)
+- ![Website Front Page](screenshots/Exploreworld_Page1.jpg)
+- 
+- ![Website Second PageC](screenshots/Exploreworld_Page2_Destinations.jpg)
+- 
+- ![Website Third page](screenshots/Exploreworld_India.jpg)
+- 
+  Grafana Outputs:
+
+- ![Grafana Cluster](screenshots/Grafana_Cluster_Dash.jpg)
+  
+- ![Grafana Nodes](screenshots/Grafana_Node_Dash.jpg)
+
+- ![Grafana Pods](screenshots/Grafana_Pods_Dash.jpg)
+
+- EC2 Output
+  ![Kubectl output](screenshots/Nodes_Pods_Svc.jpg)
+  
 
 ---
 
