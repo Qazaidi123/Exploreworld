@@ -115,6 +115,8 @@ function generateID(){
 }
 
 function submitForm(){
+  alert("SUBMIT FUNCTION CALLED");
+        let msg=document.getElementById("successMsg");
 
   let data = {
     name: document.getElementById("name").value,
@@ -133,18 +135,19 @@ function submitForm(){
   headers: {
     "Content-Type": "application/json"
   },
-  body: JSON.stringify({
-    name,
-    mobile,
-    destination,
-    members
-  })
+  body: JSON.stringify(data)
 })
 .then(res => res.json())
 .then(data => {
+  alert
+         ( "Registration Successful");
+         ( "Your Registration ID: " + data.reg_id);
+
+
   document.getElementById("successMsg").innerText =
-    "Thanks for Registration. Your Registration ID " + data.reg_id;
-})
+      "Registration ID: " + data.reg_id;
+  })
+
 .catch(err => {
   console.error(err);
 });
