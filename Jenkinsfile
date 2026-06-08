@@ -14,7 +14,7 @@ pipeline {
 
     stage("git repo clone") {
       steps {
-        git url: "https://github.com/Qazaidi123/dockerimage_optimize.git", branch: "main"
+        git url: "https://github.com/Qazaidi123/Exploreworld.git", branch: "main"
       }
     } 
                 
