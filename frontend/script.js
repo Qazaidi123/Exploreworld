@@ -149,6 +149,7 @@ function submitForm(){
   })
 
 .catch(err => {
+  alert("ERROR");
   console.error(err);
 });
       }  
