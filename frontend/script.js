@@ -139,6 +139,7 @@ function submitForm(){
 })
 .then(res => res.json())
 .then(data => {
+
   alert
          ( "Registration Successful");
          ( "Your Registration ID: " + data.reg_id);
@@ -146,11 +147,10 @@ function submitForm(){
 
   document.getElementById("successMsg").innerText =
       "Registration ID: " + data.reg_id;
-  })
 
+})
 .catch(err => {
   alert("ERROR");
   console.error(err);
 });
-      }  
-  
+      }
