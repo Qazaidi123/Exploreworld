@@ -1,6 +1,6 @@
-CREATE DATABASE travel;
+CREATE DATABASE exploreworld;
 
-USE travel;
+USE exploreworld;
 
 CREATE TABLE registrations (
     id INT AUTO_INCREMENT PRIMARY KEY,
