@@ -9,8 +9,8 @@ data:
   DB_PASS : explore123
 
   db.sql: |
-    CREATE DATABASE travel;
-    USE travel;
+    CREATE DATABASE exploreworld;
+    USE exploreworld;
 
     CREATE TABLE registrations (
         id INT AUTO_INCREMENT PRIMARY KEY,
