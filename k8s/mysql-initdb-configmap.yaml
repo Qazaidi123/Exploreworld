@@ -4,7 +4,7 @@ metadata:
   name: mysql-initdb-config
 data:
   db.sql: |
-    USE exploreworld-name;
+    USE exploreworldname;
 
     CREATE TABLE registrations (
         id INT AUTO_INCREMENT PRIMARY KEY,
