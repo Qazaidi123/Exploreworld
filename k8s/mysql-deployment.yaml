@@ -30,6 +30,14 @@ spec:
         - name: MYSQL_DB_NAME
           value: exploreworld
 
+        - name: MYSQL_DB_HOST
+          value: mysql-service
+
+        - name: MYSQL_DB_user
+          value: explore
+
+        
+
         ports:
         - containerPort: 3306
 
