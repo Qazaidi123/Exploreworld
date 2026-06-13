@@ -1,12 +1,18 @@
 <?php
 
+header('Content-Type: application/json');
+
 $host = getenv('DB_HOST');
 $dbname = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
 
+$connected = false;
+$conn = null;
 
-    $conn = @new mysqli($host, $user, $pass, $dbname);
+for ($i = 0; $i < 3; $i++) {
+
+    $conn = new mysqli($host, $user, $pass, $dbname);
 
     if (!$conn->connect_error) {
         $connected = true;
@@ -17,16 +23,17 @@ $pass = getenv('DB_PASS');
 }
 
 if (!$connected) {
-    die("Database connection failed");
+    echo json_encode([
+        "status" => "error",
+        "message" => "Database connection failed"
+    ]);
+    exit;
 }
 
-header('Content-Type: application/json');
-
-$response = [
+echo json_encode([
     "status" => "success",
     "message" => "Connected to MySQL successfully",
     "reg_id" => "REG12345"
-];
+]);
 
-echo json_encode($response);
 ?>
