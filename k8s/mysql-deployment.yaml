@@ -30,6 +30,8 @@ spec:
         - name: MYSQL_DATABASE
           value: exploreworld
 
+        ports:
+        - containerPort: 3306
 
         volumeMounts:
         - name: mysql-initdb
@@ -39,7 +41,3 @@ spec:
       - name: mysql-initdb
         configMap:
           name: mysql-initdb-config
-
-
-        ports:
-        - containerPort: 3306
