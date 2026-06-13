@@ -1,4 +1,4 @@
-USE exploreworld;
+USE exploreworld-name;
 
 CREATE TABLE registrations (
     id INT AUTO_INCREMENT PRIMARY KEY,
