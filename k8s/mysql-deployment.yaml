@@ -24,17 +24,25 @@ spec:
         image: mysql:5.7
 
         env:
-        - name: MYSQL_DB_PASS
-          value: explore123
+        - name: DB_PASS
+          valueFrom:
+             configMapKeyRef:
+               name: expo-config
 
-        - name: MYSQL_DB_NAME
-          value: exploreworld
+        - name: DB_NAME
+          valueFrom:
+             configMapKeyRef:
+               name: expo-config
 
-        - name: MYSQL_DB_HOST
-          value: mysql-service
+        - name: DB_HOST
+          valueFrom:
+             configMapKeyRef:
+               name: expo-config
 
-        - name: MYSQL_DB_user
-          value: explore
+        - name: DB_user
+          valueFrom:
+             configMapKeyRef:
+               name: expo-config
 
         
 
