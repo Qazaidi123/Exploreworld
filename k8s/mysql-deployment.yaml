@@ -24,10 +24,10 @@ spec:
         image: mysql:5.7
 
         env:
-        - name: MYSQL_ROOT_PASSWORD
+        - name: MYSQL_DB_PASS
           value: explore123
 
-        - name: MYSQL_DATABASE
+        - name: MYSQL_DB_NAME
           value: exploreworld
 
         ports:
