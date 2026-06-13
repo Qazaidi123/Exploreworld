@@ -28,21 +28,25 @@ spec:
           valueFrom:
              configMapKeyRef:
                name: expo-config
+               key: DB_PASS
 
         - name: MYSQL_DATABASE
           valueFrom:
              configMapKeyRef:
                name: expo-config
+               key: DB_NAME
 
         - name: MYSQL_USER
           valueFrom:
              configMapKeyRef:
                name: expo-config
+               key: DB_USER
 
         - name: MYSQL_PASSWORD
           valueFrom:
              configMapKeyRef:
                name: expo-config
+               key: DB_PASS
 
         
 
