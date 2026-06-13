@@ -52,7 +52,7 @@ pipeline {
       steps {
         withAWS(credentials: 'AWS-CREDENTIALS') {
         sh " aws eks --region ap-south-1 update-kubeconfig --name ekscluster "
-        sh " kubectl get pods "
+    
         sh " kubectl apply -f k8s/ "
 
         sh "kubectl set image deployment/frontend-deployment frontend-container=$FRONTEND_IMAGE:$IMAGE_TAG"
