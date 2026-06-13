@@ -7,7 +7,7 @@ $pass = getenv('DB_PASS');
 
 $connected = false;
 
-for ($i = 0; $i < 10; $i++) {
+for ($i = 0; $i < 30; $i++) {
 
     $conn = @new mysqli($host, $user, $pass, $dbname);
 
