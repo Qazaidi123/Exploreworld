@@ -5,9 +5,6 @@ $dbname = getenv('DB_NAME');
 $user = getenv('DB_USER');
 $pass = getenv('DB_PASS');
 
-$connected = false;
-
-for ($i = 0; $i < 30; $i++) {
 
     $conn = @new mysqli($host, $user, $pass, $dbname);
 
@@ -23,5 +20,13 @@ if (!$connected) {
     die("Database connection failed");
 }
 
-echo "Connected to MySQL successfully!";
+header('Content-Type: application/json');
+
+$response = [
+    "status" => "success",
+    "message" => "Connected to MySQL successfully",
+    "reg_id" => "REG12345"
+];
+
+echo json_encode($response);
 ?>
