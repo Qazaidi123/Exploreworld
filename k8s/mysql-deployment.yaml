@@ -24,22 +24,22 @@ spec:
         image: mysql:5.7
 
         env:
-        - name: DB_PASS
+        - name: MYSQL_ROOT_PASSWORD
           valueFrom:
              configMapKeyRef:
                name: expo-config
 
-        - name: DB_NAME
+        - name: MYSQL_DATABASE
           valueFrom:
              configMapKeyRef:
                name: expo-config
 
-        - name: DB_HOST
+        - name: MYSQL_USER
           valueFrom:
              configMapKeyRef:
                name: expo-config
 
-        - name: DB_user
+        - name: MYSQL_PASSWORD
           valueFrom:
              configMapKeyRef:
                name: expo-config
