@@ -23,36 +23,14 @@ spec:
       - name: database-container
         image: mysql:5.7
 
-        env:
-        - name: MYSQL_ROOT_PASSWORD
-          value: explore123
+        volumeMounts:
+        - name: mysql-initdb
+          mountPath: /docker-entrypoint-initdb.d
 
-        - name: MYSQL_DATABASE
-          value: exploreworld
-
-        - name: DB_HOST
-          valueFrom:
-            configMapKeyRef:
-              name: expo-config
-              key: DB_HOST
-
-        - name: DB_NAME
-          valueFrom:
-            configMapKeyRef:
-              name: expo-config
-              key: DB_NAME
-
-        - name: DB_USER
-          valueFrom:
-            configMapKeyRef:
-              name: expo-config
-              key: DB_USER
-
-        - name: DB_PASS
-          valueFrom:
-            configMapKeyRef:
-              name: expo-config
-              key: DB_PASS
+      volumes:
+      - name: mysql-initdb
+        configMap:
+          name: mysql-initdb-config
 
 
         ports:
