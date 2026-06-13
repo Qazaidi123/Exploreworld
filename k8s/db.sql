@@ -1,5 +1,3 @@
-CREATE DATABASE exploreworld;
-
 USE exploreworld;
 
 CREATE TABLE registrations (
