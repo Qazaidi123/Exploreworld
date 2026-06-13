@@ -3,9 +3,9 @@ kind: ConfigMap
 metadata:
   name: expo-config
 data:
-  DB_HOST : mysql-service
-  DB_NAME : exploreworld
-  DB_USER : explore
+  DB_HOST : exploreworld-host
+  DB_NAME : exploreworld-name
+  DB_USER : explore-user
   DB_PASS : explore123
 
   
